@@ -1,34 +1,109 @@
 {
     "docs": [
         {
-            "location": "/index.html", 
+            "location": "/", 
             "text": "Introduction", 
             "title": "Home"
         }, 
         {
-            "location": "/index.html#introduction", 
+            "location": "/#introduction", 
             "text": "", 
             "title": "Introduction"
         }, 
         {
-            "location": "/user/tutorial/quickstart/index.html", 
+            "location": "/user/tutorial/quickstart/", 
             "text": "Index", 
             "title": "Quickstart"
         }, 
         {
-            "location": "/user/tutorial/quickstart/index.html#index", 
+            "location": "/user/tutorial/quickstart/#index", 
             "text": "", 
             "title": "Index"
         }, 
         {
-            "location": "/developer/setting-environment/index.html", 
-            "text": "Developer Guide", 
+            "location": "/developer/modules/project/", 
+            "text": "Project Documentation\n\n\nHow to create a New Project\n\n\nThs is some text\n\n\nobj = Project(a=b)\n\n\n\n\nHow to update an existing Project\n\n\nHow to crete a New Run in a Project", 
+            "title": "Project"
+        }, 
+        {
+            "location": "/developer/modules/project/#project-documentation", 
+            "text": "", 
+            "title": "Project Documentation"
+        }, 
+        {
+            "location": "/developer/modules/project/#how-to-create-a-new-project", 
+            "text": "Ths is some text  obj = Project(a=b)", 
+            "title": "How to create a New Project"
+        }, 
+        {
+            "location": "/developer/modules/project/#how-to-update-an-existing-project", 
+            "text": "", 
+            "title": "How to update an existing Project"
+        }, 
+        {
+            "location": "/developer/modules/project/#how-to-crete-a-new-run-in-a-project", 
+            "text": "", 
+            "title": "How to crete a New Run in a Project"
+        }, 
+        {
+            "location": "/developer/modules/gromacs/", 
+            "text": "Gromacs", 
+            "title": "Gromacs"
+        }, 
+        {
+            "location": "/developer/modules/gromacs/#gromacs", 
+            "text": "", 
+            "title": "Gromacs"
+        }, 
+        {
+            "location": "/developer/documentation/", 
+            "text": "Documentation\n\n\nAdding a Page\n\n\nTo add a new page for the documentation, please follow the steps: \n\n\n\n\n\n\nCreate a page \nsome-page.md\n in \ndocs/\n ie., in the location \ndocs/some-page.md\n. \n\n\n\n\n\n\nAdd the page info to \nmkdocs.yml\n in the project root folder ie., \nframework/mkdocs.yml\n\n\n\n\n\n\n- Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : developer/somepage.md\n\n\n\n\n\nNote:\n Create the page in \ndeveloper\n folder in \ndocs\n if it belongs to developer docs, or in \nuser\n for user docs\n\n\nGenerating the Docs\n\n\nUse \nmkdocs serve\n , then you will be able to access the \nhttp://localhost:8000\n . \n\n\nYou can use \nmkdocs build\n to generate a build in the folder \nsite\n .\n\n\nDeploying to gh-pages\n\n\nMake the necessary changes and pull the latest code, then do the command \n\n\nmkdocs gh-deploy --clean\n\n\n\n\nThis will create a build in the folder \nsite\n and push to the \ngh-pages\n branch.\n\n\nIt will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/developer/documentation/#documentation", 
+            "text": "", 
+            "title": "Documentation"
+        }, 
+        {
+            "location": "/developer/documentation/#adding-a-page", 
+            "text": "To add a new page for the documentation, please follow the steps:     Create a page  some-page.md  in  docs/  ie., in the location  docs/some-page.md .     Add the page info to  mkdocs.yml  in the project root folder ie.,  framework/mkdocs.yml    - Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : developer/somepage.md  Note:  Create the page in  developer  folder in  docs  if it belongs to developer docs, or in  user  for user docs", 
+            "title": "Adding a Page"
+        }, 
+        {
+            "location": "/developer/documentation/#generating-the-docs", 
+            "text": "Use  mkdocs serve  , then you will be able to access the  http://localhost:8000  .   You can use  mkdocs build  to generate a build in the folder  site  .", 
+            "title": "Generating the Docs"
+        }, 
+        {
+            "location": "/developer/documentation/#deploying-to-gh-pages", 
+            "text": "Make the necessary changes and pull the latest code, then do the command   mkdocs gh-deploy --clean  This will create a build in the folder  site  and push to the  gh-pages  branch.  It will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the", 
+            "title": "Deploying to gh-pages"
+        }, 
+        {
+            "location": "/developer/setting-environment/", 
+            "text": "Development Env Setup\n\n\nThis is the first time setup doc for the developers.\n\n\nFirst time installation\n\n\ngit clone https://github.com/rsquarelabs/framework\nvirtualenv venv\nsource venv/bin/activate\npip2.7 install -r requirements.txt\n\n\n\n\nInstall Gromacs (www.gromacs.org)\n\n\nIn Mac \nbrew install gromacs\n\n\nIn ubuntu/debian \nsudo apt-get install gromacs\n\n\nIn Fedora/CentOS \nsudo yum install gromacs\n\n\nFile system\n\n\n\n\nrsquarelabs-core\n - main module \n\n\nrsquarelabs-core/engines\n - packages of the modules (gromacs, db_engine(sqlite)) \n\n\nrsquarelabs-core/utils\n - utilities that can be used accross the core package\n\n\nrsquarelabs-core/websuite\n webserver that starts the webclient and can be accessed at http://localhost:9090\n\n\ntests\n - tests for all the modules/packages\n\n\nsbin\n - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere \n\n\n\n\nAccessing the command\n\n\nOnce this package is installed via \npip install rsquarelabs-core\n , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in \n.bashrc\n or add a softlink, here is how to\nadd these commands in \n.bashrc\n\n\ngedit ~/.bashrc\n\n\nadd the following lines \n\n\nalias r2_gromacs='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_gromacs.py'\nalias r2_server_start='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_server_start.py'\n\n\n\n\nrestart the terminal or do \nsource ~/.bashrc\n to enable these commands for first time", 
             "title": "Environment Setup"
         }, 
         {
-            "location": "/developer/setting-environment/index.html#developer-guide", 
-            "text": "", 
-            "title": "Developer Guide"
+            "location": "/developer/setting-environment/#development-env-setup", 
+            "text": "This is the first time setup doc for the developers.", 
+            "title": "Development Env Setup"
+        }, 
+        {
+            "location": "/developer/setting-environment/#first-time-installation", 
+            "text": "git clone https://github.com/rsquarelabs/framework\nvirtualenv venv\nsource venv/bin/activate\npip2.7 install -r requirements.txt  Install Gromacs (www.gromacs.org)  In Mac  brew install gromacs  In ubuntu/debian  sudo apt-get install gromacs  In Fedora/CentOS  sudo yum install gromacs", 
+            "title": "First time installation"
+        }, 
+        {
+            "location": "/developer/setting-environment/#file-system", 
+            "text": "rsquarelabs-core  - main module   rsquarelabs-core/engines  - packages of the modules (gromacs, db_engine(sqlite))   rsquarelabs-core/utils  - utilities that can be used accross the core package  rsquarelabs-core/websuite  webserver that starts the webclient and can be accessed at http://localhost:9090  tests  - tests for all the modules/packages  sbin  - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere", 
+            "title": "File system"
+        }, 
+        {
+            "location": "/developer/setting-environment/#accessing-the-command", 
+            "text": "Once this package is installed via  pip install rsquarelabs-core  , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in  .bashrc  or add a softlink, here is how to\nadd these commands in  .bashrc  gedit ~/.bashrc  add the following lines   alias r2_gromacs='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_gromacs.py'\nalias r2_server_start='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_server_start.py'  restart the terminal or do  source ~/.bashrc  to enable these commands for first time", 
+            "title": "Accessing the command"
         }
     ]
 }

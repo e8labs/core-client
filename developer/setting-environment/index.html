@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/developer/setting-environment/index.html">
+        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/developer/setting-environment/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
 	<title>Environment Setup - R2-CORE Framework</title>
@@ -51,7 +51,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href="../../index.html">R2-CORE Framework</a>
+            <a class="navbar-brand" href="../..">R2-CORE Framework</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -61,7 +61,7 @@
             
             
                 <li >
-                    <a href="../../index.html">Home</a>
+                    <a href="../..">Home</a>
                 </li>
             
             
@@ -72,7 +72,7 @@
                     
                         
 <li >
-    <a href="../../user/tutorial/quickstart/index.html">Quickstart</a>
+    <a href="../../user/tutorial/quickstart/">Quickstart</a>
 </li>
 
                     
@@ -86,8 +86,26 @@
                     <ul class="dropdown-menu">
                     
                         
+<li >
+    <a href="../modules/project/">Project</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../modules/gromacs/">Gromacs</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../documentation/">Documentation</a>
+</li>
+
+                    
+                        
 <li class="active">
-    <a href="index.html">Environment Setup</a>
+    <a href="./">Environment Setup</a>
 </li>
 
                     
@@ -105,7 +123,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../../user/tutorial/quickstart/index.html">
+                    <a rel="next" href="../documentation/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
@@ -133,14 +151,52 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#developer-guide">Developer Guide</a></li>
+        <li class="main active"><a href="#development-env-setup">Development Env Setup</a></li>
+        
+            <li><a href="#first-time-installation">First time installation</a></li>
+        
+            <li><a href="#file-system">File system</a></li>
+        
+            <li><a href="#accessing-the-command">Accessing the command</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="developer-guide"><a class="toclink" href="#developer-guide">Developer Guide</a></h1></div>
+<h1 id="development-env-setup"><a class="toclink" href="#development-env-setup">Development Env Setup</a></h1>
+<p>This is the first time setup doc for the developers.</p>
+<h2 id="first-time-installation"><a class="toclink" href="#first-time-installation">First time installation</a></h2>
+<pre><code>git clone https://github.com/rsquarelabs/framework
+virtualenv venv
+source venv/bin/activate
+pip2.7 install -r requirements.txt
+</code></pre>
+
+<p>Install Gromacs (www.gromacs.org)</p>
+<p>In Mac <code>brew install gromacs</code></p>
+<p>In ubuntu/debian <code>sudo apt-get install gromacs</code></p>
+<p>In Fedora/CentOS <code>sudo yum install gromacs</code></p>
+<h2 id="file-system"><a class="toclink" href="#file-system">File system</a></h2>
+<ul>
+<li><strong>rsquarelabs-core</strong> - main module </li>
+<li><strong>rsquarelabs-core/engines</strong> - packages of the modules (gromacs, db_engine(sqlite)) </li>
+<li><strong>rsquarelabs-core/utils</strong> - utilities that can be used accross the core package</li>
+<li><strong>rsquarelabs-core/websuite</strong> webserver that starts the webclient and can be accessed at http://localhost:9090</li>
+<li><strong>tests</strong> - tests for all the modules/packages</li>
+<li><strong>sbin</strong> - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere </li>
+</ul>
+<h2 id="accessing-the-command"><a class="toclink" href="#accessing-the-command">Accessing the command</a></h2>
+<p>Once this package is installed via <code>pip install rsquarelabs-core</code> , all the python scripts in sbin are supposed to be accessbile from anywhere, 
+but to simulate that behaviour in the development, we can create alias for these commands in <code>.bashrc</code> or add a softlink, here is how to
+add these commands in <code>.bashrc</code></p>
+<p><code>gedit ~/.bashrc</code></p>
+<p>add the following lines </p>
+<pre><code>alias r2_gromacs='python /home/&lt;USERNAME&gt;/&lt;R2-CORE-framework-PATH&gt;/sbin/r2_gromacs.py'
+alias r2_server_start='python /home/&lt;USERNAME&gt;/&lt;R2-CORE-framework-PATH&gt;/sbin/r2_server_start.py'
+</code></pre>
+
+<p>restart the terminal or do <code>source ~/.bashrc</code> to enable these commands for first time</p></div>
         </div>
 
         <footer class="col-md-12">
