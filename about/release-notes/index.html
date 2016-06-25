@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/">
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/about/release-notes/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>R2-CORE Framework</title>
+	<title>Release Management - R2-CORE Framework</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -51,7 +51,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">R2-CORE Framework</a>
+            <a class="navbar-brand" href="../..">R2-CORE Framework</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -60,8 +60,8 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="../..">Home</a>
                 </li>
             
             
@@ -72,7 +72,7 @@
                     
                         
 <li >
-    <a href="user-guide/tutorial/quickstart/">Quickstart</a>
+    <a href="../../user-guide/tutorial/quickstart/">Quickstart</a>
 </li>
 
                     
@@ -87,25 +87,25 @@
                     
                         
 <li >
-    <a href="dev-guide/modules/project/">Project</a>
+    <a href="../../dev-guide/modules/project/">Project</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/modules/gromacs/">Gromacs</a>
+    <a href="../../dev-guide/modules/gromacs/">Gromacs</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/documentation/">Documentation</a>
+    <a href="../../dev-guide/documentation/">Documentation</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/setting-environment/">Environment Setup</a>
+    <a href="../../dev-guide/setting-environment/">Environment Setup</a>
 </li>
 
                     
@@ -114,31 +114,31 @@
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="about/license/">License</a>
+    <a href="../license/">License</a>
 </li>
 
                     
                         
 <li >
-    <a href="about/contributing/">Contributing</a>
+    <a href="../contributing/">Contributing</a>
+</li>
+
+                    
+                        
+<li class="active">
+    <a href="./">Release Management</a>
 </li>
 
                     
                         
 <li >
-    <a href="about/release-notes/">Release Management</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="about/project-management/">Project Management</a>
+    <a href="../project-management/">Project Management</a>
 </li>
 
                     
@@ -155,13 +155,13 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="../contributing/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="user-guide/tutorial/quickstart/">
+                    <a rel="prev" href="../project-management/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -184,14 +184,57 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#introduction">Introduction</a></li>
+        <li class="main active"><a href="#release-management">Release Management</a></li>
+        
+            <li><a href="#versioning">Versioning</a></li>
+        
+            <li><a href="#release-process">Release process</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h1></div>
+<h1 id="release-management"><a class="toclink" href="#release-management">Release Management</a></h1>
+<h2 id="versioning"><a class="toclink" href="#versioning">Versioning</a></h2>
+<p>Minor version numbers (0.0.x) are used for changes that are API compatible. You should be able to upgrade between minor point releases without any other code changes.</p>
+<p>Medium version numbers (0.x.0) may include API changes, in line with the deprecation policy. You should read the release notes carefully before upgrading between medium point releases.</p>
+<p>Major version numbers (x.0.0) are reserved for substantial project milestones.</p>
+<h2 id="release-process"><a class="toclink" href="#release-process">Release process</a></h2>
+<p>The release manager is selected on every quarterly maintenance cycle.</p>
+<ol>
+<li>The manager should be selected by <a href="https://github.com/rrmerugu">@rrmerugu</a>.</li>
+<li>The manager will then have the maintainer role added to PyPI package.</li>
+<li>The previous manager will then have the maintainer role removed from the PyPI package.</li>
+</ol>
+<p>Our PyPI releases will be handled by either the current release manager, or by <a href="https://github.com/rrmerugu">@rrmerugu</a>. 
+Every release should have an open issue tagged with the Release label and marked against the appropriate milestone.</p>
+<p>The following template should be used for the description of the issue, and serves as a release checklist.</p>
+<pre><code>Release manager is @***.
+Pull request is #***.
+
+During development cycle:
+
+- [ ] Upload the new content to be translated to [transifex](https://github.com/rsquarelabs/framework/about/project-management/#translations).
+
+
+Checklist:
+
+- [ ] Create pull request for [release notes](https://github.com/rsquarelabs/framework/blob/master/docs/topics/release-notes.md) based on the [*.*.* milestone](https://github.com/rsquarelabs/framework/milestones/***).
+- [ ] Ensure the pull request increments the version to `*.*.*` in [`rsquarelabs_core/__init__.py`](https://github.com/rsquarelabs/framework/blob/master/rsquarelabs_core/__init__.py).
+- [ ] Confirm with @rrmerugu that release is finalized and ready to go.
+- [ ] Ensure that release date is included in pull request.
+- [ ] Merge the release pull request.
+- [ ] Push the package to PyPI with `./setup.py publish`.
+- [ ] Tag the release, with `git tag -a *.*.* -m 'version *.*.*'; git push --tags`.
+- [ ] Deploy the documentation with `mkdocs gh-deploy`.
+- [ ] Make a release announcement on the [discussion group](https://groups.google.com/forum/?fromgroups#!forum/django-rest-framework).
+- [ ] Make a release announcement on twitter.
+- [ ] Close the milestone on GitHub.
+
+To modify this process for future releases make a pull request to the [project management](https://rsquarelabs.github.com/framework/about/project-management/) documentation.
+
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
@@ -202,12 +245,12 @@
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">

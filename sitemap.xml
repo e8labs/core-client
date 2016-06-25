@@ -4,7 +4,7 @@
     
     <url>
      <loc>http://docs.rsquarelabs.com/sdk/framework/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -12,8 +12,8 @@
     
         
     <url>
-     <loc>http://docs.rsquarelabs.com/sdk/framework/user/tutorial/quickstart/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/user-guide/tutorial/quickstart/</loc>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -22,26 +22,54 @@
     
         
     <url>
-     <loc>http://docs.rsquarelabs.com/sdk/framework/developer/modules/project/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/dev-guide/modules/project/</loc>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://docs.rsquarelabs.com/sdk/framework/developer/modules/gromacs/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/dev-guide/modules/gromacs/</loc>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://docs.rsquarelabs.com/sdk/framework/developer/documentation/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/dev-guide/documentation/</loc>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://docs.rsquarelabs.com/sdk/framework/developer/setting-environment/</loc>
-     <lastmod>2016-06-25</lastmod>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/dev-guide/setting-environment/</loc>
+     <lastmod>2016-06-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/about/license/</loc>
+     <lastmod>2016-06-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/about/contributing/</loc>
+     <lastmod>2016-06-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/about/release-notes/</loc>
+     <lastmod>2016-06-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.rsquarelabs.com/sdk/framework/about/project-management/</loc>
+     <lastmod>2016-06-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

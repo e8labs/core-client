@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/developer/documentation/">
+        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/about/project-management/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Documentation - R2-CORE Framework</title>
+	<title>Project Management - R2-CORE Framework</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -67,12 +67,45 @@
             
             
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../../user/tutorial/quickstart/">Quickstart</a>
+    <a href="../../user-guide/tutorial/quickstart/">Quickstart</a>
+</li>
+
+                    
+                    </ul>
+                </li>
+            
+            
+            
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dev Guide <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    
+                        
+<li >
+    <a href="../../dev-guide/modules/project/">Project</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../dev-guide/modules/gromacs/">Gromacs</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../dev-guide/documentation/">Documentation</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../../dev-guide/setting-environment/">Environment Setup</a>
 </li>
 
                     
@@ -82,30 +115,30 @@
             
             
                 <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dev Guides <b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="../modules/project/">Project</a>
+    <a href="../license/">License</a>
 </li>
 
                     
                         
 <li >
-    <a href="../modules/gromacs/">Gromacs</a>
+    <a href="../contributing/">Contributing</a>
+</li>
+
+                    
+                        
+<li >
+    <a href="../release-notes/">Release Management</a>
 </li>
 
                     
                         
 <li class="active">
-    <a href="./">Documentation</a>
-</li>
-
-                    
-                        
-<li >
-    <a href="../setting-environment/">Environment Setup</a>
+    <a href="./">Project Management</a>
 </li>
 
                     
@@ -123,12 +156,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../modules/gromacs/">
+                    <a rel="next" href="../release-notes/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../setting-environment/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -151,47 +184,67 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#documentation">Documentation</a></li>
+        <li class="main active"><a href="#project-management">Project management</a></li>
         
-            <li><a href="#adding-a-page">Adding a Page</a></li>
+            <li><a href="#maintenance-team">Maintenance team</a></li>
         
-            <li><a href="#generating-the-docs">Generating the Docs</a></li>
+            <li><a href="#project-requirements">Project requirements</a></li>
         
-            <li><a href="#deploying-to-gh-pages">Deploying to gh-pages</a></li>
+            <li><a href="#project-ownership">Project ownership</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="documentation"><a class="toclink" href="#documentation">Documentation</a></h1>
-<h2 id="adding-a-page"><a class="toclink" href="#adding-a-page">Adding a Page</a></h2>
-<p>To add a new page for the documentation, please follow the steps: </p>
+<h1 id="project-management"><a class="toclink" href="#project-management">Project management</a></h1>
+<p>This document outlines our project management processes for R2-Core Framework.</p>
+<p>The aim is to ensure that the project has a high <a href="https://en.wikipedia.org/wiki/Bus_factor">"bus factor"</a>, and can continue to remain well
+ supported for the foreseeable future. Suggestions for improvements to our process are welcome.</p>
+<h2 id="maintenance-team"><a class="toclink" href="#maintenance-team">Maintenance team</a></h2>
+<p>We have a quarterly maintenance cycle where new members may join the maintenance team. 
+We currently cap the size of the team at 5 members, and may encourage folks to step out of the 
+team for a cycle to allow new members to participate.</p>
+<h3 id="current-team"><a class="toclink" href="#current-team">Current Team</a></h3>
+<p>The current maintenance team includes:</p>
 <ol>
-<li>
-<p>Create a page <code>some-page.md</code> in <code>docs/</code> ie., in the location <code>docs/some-page.md</code>. </p>
-</li>
-<li>
-<p>Add the page info to <code>mkdocs.yml</code> in the project root folder ie., <code>framework/mkdocs.yml</code></p>
-</li>
+<li><a href="https://github.com/rrmerugu">@rrmerugu</a></li>
+<li><a href="https://github.com/nitish515">@nitish515</a></li>
 </ol>
-<pre><code>- Dev Guides:
-    - Environment Setup: developer/setting-environment.md
-    - Some Page : developer/somepage.md
-
-</code></pre>
-
-<p><strong>Note:</strong> Create the page in <code>developer</code> folder in <code>docs</code> if it belongs to developer docs, or in <code>user</code> for user docs</p>
-<h2 id="generating-the-docs"><a class="toclink" href="#generating-the-docs">Generating the Docs</a></h2>
-<p>Use <code>mkdocs serve</code> , then you will be able to access the <code>http://localhost:8000</code> . </p>
-<p>You can use <code>mkdocs build</code> to generate a build in the folder <code>site</code> .</p>
-<h2 id="deploying-to-gh-pages"><a class="toclink" href="#deploying-to-gh-pages">Deploying to gh-pages</a></h2>
-<p>Make the necessary changes and pull the latest code, then do the command </p>
-<pre><code>mkdocs gh-deploy --clean
-</code></pre>
-
-<p>This will create a build in the folder <code>site</code> and push to the <code>gh-pages</code> branch.</p>
-<p>It will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the </p></div>
+<h3 id="maintenance-cycles"><a class="toclink" href="#maintenance-cycles">Maintenance cycles</a></h3>
+<p>Each maintenance cycle is initiated by an issue being opened with the <code>Process</code> label.</p>
+<p>To be considered for a maintainer role simply comment against the issue.
+Existing members must explicitly opt-in to the next cycle by check-marking their name.
+The final decision on the incoming team will be made by <code>@rrmerugu</code></p>
+<p>Members of the maintenance team will be added as collaborators to the repository.</p>
+<h3 id="responsibilities-of-team-members"><a class="toclink" href="#responsibilities-of-team-members">Responsibilities of team members.</a></h3>
+<p>Team members have the following responsibilities.</p>
+<ol>
+<li>Close invalid or resolved tickets.</li>
+<li>Add triage labels and milestones to tickets.</li>
+<li>Merge finalized pull requests.</li>
+<li>Build and deploy the documentation, using <code>mkdocs gh-deploy</code>.</li>
+<li>Build and update the included translation packs.</li>
+</ol>
+<p>Further notes for maintainers:</p>
+<ol>
+<li>Code changes should come in the form of a pull request - do not push directly to master.</li>
+<li>Maintainers should typically not merge their own pull requests.</li>
+<li>Each issue/pull request should have exactly one label once triaged.</li>
+<li>Search for un-triaged issues with <a href="https://github.com/rsquarelabs/framework/issues?q=is%3Aopen+no%3Alabel">is:open no:label</a>.</li>
+</ol>
+<p>It should be noted that participating actively in this project clearly 
+<strong> does not require being part of the maintenance team</strong>. Almost every import part of issue triage and project 
+improvement can be actively worked on regardless of your collaborator status on the repository.</p>
+<h2 id="project-requirements"><a class="toclink" href="#project-requirements">Project requirements</a></h2>
+<p>All our test requirements are pinned to exact versions, in order to ensure that our test runs are reproducible. 
+We maintain the requirements in the <code>requirements</code> directory. The requirements files are referenced from the <code>tox.ini</code>
+configuration file, ensuring we have a single source of truth for package versions used in testing.</p>
+<p>Package upgrades should generally be treated as isolated pull requests. You can check if there are any packages available at 
+a newer version, by using the <code>pip list --outdated</code>.</p>
+<h2 id="project-ownership"><a class="toclink" href="#project-ownership">Project ownership</a></h2>
+<p>The PyPI package is owned by <a href="https://github.com/rrmerugu">@rrmerugu</a>. As a backup <a href="https://github.com/shivamsk">@shivamsk</a> also has ownership of the package.</p>
+<p>If <a href="https://github.com/rrmerugu">@rrmerugu</a> ceases to participate in the project then <a href="https://github.com/shivamsk">@shivamsk</a> has responsibility for handing over ownership duties.</p></div>
         </div>
 
         <footer class="col-md-12">

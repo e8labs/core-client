@@ -11,99 +11,179 @@
             "title": "Introduction"
         }, 
         {
-            "location": "/user/tutorial/quickstart/", 
+            "location": "/user-guide/tutorial/quickstart/", 
             "text": "Index", 
             "title": "Quickstart"
         }, 
         {
-            "location": "/user/tutorial/quickstart/#index", 
+            "location": "/user-guide/tutorial/quickstart/#index", 
             "text": "", 
             "title": "Index"
         }, 
         {
-            "location": "/developer/modules/project/", 
+            "location": "/dev-guide/modules/project/", 
             "text": "Project Documentation\n\n\nHow to create a New Project\n\n\nThs is some text\n\n\nobj = Project(a=b)\n\n\n\n\nHow to update an existing Project\n\n\nHow to crete a New Run in a Project", 
             "title": "Project"
         }, 
         {
-            "location": "/developer/modules/project/#project-documentation", 
+            "location": "/dev-guide/modules/project/#project-documentation", 
             "text": "", 
             "title": "Project Documentation"
         }, 
         {
-            "location": "/developer/modules/project/#how-to-create-a-new-project", 
+            "location": "/dev-guide/modules/project/#how-to-create-a-new-project", 
             "text": "Ths is some text  obj = Project(a=b)", 
             "title": "How to create a New Project"
         }, 
         {
-            "location": "/developer/modules/project/#how-to-update-an-existing-project", 
+            "location": "/dev-guide/modules/project/#how-to-update-an-existing-project", 
             "text": "", 
             "title": "How to update an existing Project"
         }, 
         {
-            "location": "/developer/modules/project/#how-to-crete-a-new-run-in-a-project", 
+            "location": "/dev-guide/modules/project/#how-to-crete-a-new-run-in-a-project", 
             "text": "", 
             "title": "How to crete a New Run in a Project"
         }, 
         {
-            "location": "/developer/modules/gromacs/", 
+            "location": "/dev-guide/modules/gromacs/", 
             "text": "Gromacs", 
             "title": "Gromacs"
         }, 
         {
-            "location": "/developer/modules/gromacs/#gromacs", 
+            "location": "/dev-guide/modules/gromacs/#gromacs", 
             "text": "", 
             "title": "Gromacs"
         }, 
         {
-            "location": "/developer/documentation/", 
-            "text": "Documentation\n\n\nAdding a Page\n\n\nTo add a new page for the documentation, please follow the steps: \n\n\n\n\n\n\nCreate a page \nsome-page.md\n in \ndocs/\n ie., in the location \ndocs/some-page.md\n. \n\n\n\n\n\n\nAdd the page info to \nmkdocs.yml\n in the project root folder ie., \nframework/mkdocs.yml\n\n\n\n\n\n\n- Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : developer/somepage.md\n\n\n\n\n\nNote:\n Create the page in \ndeveloper\n folder in \ndocs\n if it belongs to developer docs, or in \nuser\n for user docs\n\n\nGenerating the Docs\n\n\nUse \nmkdocs serve\n , then you will be able to access the \nhttp://localhost:8000\n . \n\n\nYou can use \nmkdocs build\n to generate a build in the folder \nsite\n .\n\n\nDeploying to gh-pages\n\n\nMake the necessary changes and pull the latest code, then do the command \n\n\nmkdocs gh-deploy --clean\n\n\n\n\nThis will create a build in the folder \nsite\n and push to the \ngh-pages\n branch.\n\n\nIt will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the", 
+            "location": "/dev-guide/documentation/", 
+            "text": "Documentation Rules\n\n\nThis section explains how to document the modules inside this tool.\n\n\nAdding a Page\n\n\nTo add a new page for the documentation, please follow the steps: \n\n\n\n\n\n\nCreate a page \nsome-page.md\n in \ndocs/\n ie., in the location \ndocs/some-page.md\n. \n\n\n\n\n\n\nAdd the page info to \nmkdocs.yml\n in the project root folder ie., \nframework/mkdocs.yml\n\n\n\n\n\n\n- Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : dev-guide/somepage.md\n\n\n\n\n\nNote:\n Create the page in \ndev-guide\n folder in \ndocs\n if it belongs to developer docs, or in \nuser-guide\n for user docs\n\n\nGenerating the Docs\n\n\nUse \nmkdocs serve\n , then you will be able to access the \nhttp://localhost:8000\n . \n\n\nYou can use \nmkdocs build\n to generate a build in the folder \nsite\n .\n\n\nDeploying to gh-pages\n\n\nMake the necessary changes and pull the latest code, then do the command \n\n\nmkdocs gh-deploy --clean\n\n\n\n\nThis will create a build in the folder \nsite\n and push to the \ngh-pages\n branch.\n\n\nIt will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the", 
             "title": "Documentation"
         }, 
         {
-            "location": "/developer/documentation/#documentation", 
-            "text": "", 
-            "title": "Documentation"
+            "location": "/dev-guide/documentation/#documentation-rules", 
+            "text": "This section explains how to document the modules inside this tool.", 
+            "title": "Documentation Rules"
         }, 
         {
-            "location": "/developer/documentation/#adding-a-page", 
-            "text": "To add a new page for the documentation, please follow the steps:     Create a page  some-page.md  in  docs/  ie., in the location  docs/some-page.md .     Add the page info to  mkdocs.yml  in the project root folder ie.,  framework/mkdocs.yml    - Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : developer/somepage.md  Note:  Create the page in  developer  folder in  docs  if it belongs to developer docs, or in  user  for user docs", 
+            "location": "/dev-guide/documentation/#adding-a-page", 
+            "text": "To add a new page for the documentation, please follow the steps:     Create a page  some-page.md  in  docs/  ie., in the location  docs/some-page.md .     Add the page info to  mkdocs.yml  in the project root folder ie.,  framework/mkdocs.yml    - Dev Guides:\n    - Environment Setup: developer/setting-environment.md\n    - Some Page : dev-guide/somepage.md  Note:  Create the page in  dev-guide  folder in  docs  if it belongs to developer docs, or in  user-guide  for user docs", 
             "title": "Adding a Page"
         }, 
         {
-            "location": "/developer/documentation/#generating-the-docs", 
+            "location": "/dev-guide/documentation/#generating-the-docs", 
             "text": "Use  mkdocs serve  , then you will be able to access the  http://localhost:8000  .   You can use  mkdocs build  to generate a build in the folder  site  .", 
             "title": "Generating the Docs"
         }, 
         {
-            "location": "/developer/documentation/#deploying-to-gh-pages", 
+            "location": "/dev-guide/documentation/#deploying-to-gh-pages", 
             "text": "Make the necessary changes and pull the latest code, then do the command   mkdocs gh-deploy --clean  This will create a build in the folder  site  and push to the  gh-pages  branch.  It will ask you for your github credentails, if you have permissions to push to the framework repository, it will generate a build and deploys it to the", 
             "title": "Deploying to gh-pages"
         }, 
         {
-            "location": "/developer/setting-environment/", 
-            "text": "Development Env Setup\n\n\nThis is the first time setup doc for the developers.\n\n\nFirst time installation\n\n\ngit clone https://github.com/rsquarelabs/framework\nvirtualenv venv\nsource venv/bin/activate\npip2.7 install -r requirements.txt\n\n\n\n\nInstall Gromacs (www.gromacs.org)\n\n\nIn Mac \nbrew install gromacs\n\n\nIn ubuntu/debian \nsudo apt-get install gromacs\n\n\nIn Fedora/CentOS \nsudo yum install gromacs\n\n\nFile system\n\n\n\n\nrsquarelabs-core\n - main module \n\n\nrsquarelabs-core/engines\n - packages of the modules (gromacs, db_engine(sqlite)) \n\n\nrsquarelabs-core/utils\n - utilities that can be used accross the core package\n\n\nrsquarelabs-core/websuite\n webserver that starts the webclient and can be accessed at http://localhost:9090\n\n\ntests\n - tests for all the modules/packages\n\n\nsbin\n - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere \n\n\n\n\nAccessing the command\n\n\nOnce this package is installed via \npip install rsquarelabs-core\n , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in \n.bashrc\n or add a softlink, here is how to\nadd these commands in \n.bashrc\n\n\ngedit ~/.bashrc\n\n\nadd the following lines \n\n\nalias r2_gromacs='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_gromacs.py'\nalias r2_server_start='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_server_start.py'\n\n\n\n\nrestart the terminal or do \nsource ~/.bashrc\n to enable these commands for first time", 
+            "location": "/dev-guide/setting-environment/", 
+            "text": "Development Env Setup\n\n\nThis is the first time setup doc for the developers.\n\n\nFirst time installation\n\n\ngit clone https://github.com/rsquarelabs/framework\nvirtualenv venv\nsource venv/bin/activate\npip2.7 install -r requirements.txt\n\n\n\n\nInstall Gromacs (www.gromacs.org)\n\n\nIn Mac \nbrew install gromacs\n\n\nIn ubuntu/debian \nsudo apt-get install gromacs\n\n\nIn Fedora/CentOS \nsudo yum install gromacs\n\n\nFile system\n\n\n\n\nrsquarelabs-core\n - main module \n\n\nrsquarelabs-core/engines\n - packages of the modules (gromacs, db_engine(sqlite)) \n\n\nrsquarelabs-core/utils\n - utilities that can be used accross the core package\n\n\nrsquarelabs-core/websuite\n webserver that starts the webclient and can be accessed at http://localhost:9090\n\n\ntests\n - tests for all the modules/packages\n\n\nsbin\n - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere \n\n\n\n\nAccessing the command\n\n\nOnce this package is installed via \npip install rsquarelabs-core\n , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in \n.bashrc\n or add a softlink, here is how to\nadd these commands in \n.bashrc\n ie., \ngedit ~/.bashrc\n\n\nadd the following lines \n\n\nalias r2_gromacs='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_gromacs.py'\nalias r2_server_start='python /home/\nUSERNAME\n/\nR2-CORE-framework-PATH\n/sbin/r2_server_start.py'\n\n\n\n\nrestart the terminal or do \nsource ~/.bashrc\n to enable these commands for first time", 
             "title": "Environment Setup"
         }, 
         {
-            "location": "/developer/setting-environment/#development-env-setup", 
+            "location": "/dev-guide/setting-environment/#development-env-setup", 
             "text": "This is the first time setup doc for the developers.", 
             "title": "Development Env Setup"
         }, 
         {
-            "location": "/developer/setting-environment/#first-time-installation", 
+            "location": "/dev-guide/setting-environment/#first-time-installation", 
             "text": "git clone https://github.com/rsquarelabs/framework\nvirtualenv venv\nsource venv/bin/activate\npip2.7 install -r requirements.txt  Install Gromacs (www.gromacs.org)  In Mac  brew install gromacs  In ubuntu/debian  sudo apt-get install gromacs  In Fedora/CentOS  sudo yum install gromacs", 
             "title": "First time installation"
         }, 
         {
-            "location": "/developer/setting-environment/#file-system", 
+            "location": "/dev-guide/setting-environment/#file-system", 
             "text": "rsquarelabs-core  - main module   rsquarelabs-core/engines  - packages of the modules (gromacs, db_engine(sqlite))   rsquarelabs-core/utils  - utilities that can be used accross the core package  rsquarelabs-core/websuite  webserver that starts the webclient and can be accessed at http://localhost:9090  tests  - tests for all the modules/packages  sbin  - the python files in this module as supposed to be linked to /usr/local/bin/ so that they can be accessed from anywhere", 
             "title": "File system"
         }, 
         {
-            "location": "/developer/setting-environment/#accessing-the-command", 
-            "text": "Once this package is installed via  pip install rsquarelabs-core  , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in  .bashrc  or add a softlink, here is how to\nadd these commands in  .bashrc  gedit ~/.bashrc  add the following lines   alias r2_gromacs='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_gromacs.py'\nalias r2_server_start='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_server_start.py'  restart the terminal or do  source ~/.bashrc  to enable these commands for first time", 
+            "location": "/dev-guide/setting-environment/#accessing-the-command", 
+            "text": "Once this package is installed via  pip install rsquarelabs-core  , all the python scripts in sbin are supposed to be accessbile from anywhere, \nbut to simulate that behaviour in the development, we can create alias for these commands in  .bashrc  or add a softlink, here is how to\nadd these commands in  .bashrc  ie.,  gedit ~/.bashrc  add the following lines   alias r2_gromacs='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_gromacs.py'\nalias r2_server_start='python /home/ USERNAME / R2-CORE-framework-PATH /sbin/r2_server_start.py'  restart the terminal or do  source ~/.bashrc  to enable these commands for first time", 
             "title": "Accessing the command"
+        }, 
+        {
+            "location": "/about/license/", 
+            "text": "Licensing\n\n\nCopyright 2016 Ravi Raja Tejasvi Merugu\n\n\nLicensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at\n\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\n\n\nUnless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.", 
+            "title": "License"
+        }, 
+        {
+            "location": "/about/license/#licensing", 
+            "text": "Copyright 2016 Ravi Raja Tejasvi Merugu  Licensed under the Apache License, Version 2.0 (the \"License\");\nyou may not use this file except in compliance with the License.\nYou may obtain a copy of the License at  http://www.apache.org/licenses/LICENSE-2.0  Unless required by applicable law or agreed to in writing, software\ndistributed under the License is distributed on an \"AS IS\" BASIS,\nWITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\nSee the License for the specific language governing permissions and\nlimitations under the License.", 
+            "title": "Licensing"
+        }, 
+        {
+            "location": "/about/contributing/", 
+            "text": "Contributing\n\n\nThe best way to contribute to the roadmap and feature discussions is by talking with the RSQUARELABS Team and \nrsquarelabs-core Community in realtime through the Gitter chat, or by starting a \nnew issue\n as a discussion thread.\n\n\n\n\nGot a Question or Problem\n\n\nBrowsing the code\n\n\nFound a Bug\n\n\nWant a feature\n\n\nContributing to the project\n\n\nSetting the Dev Env\n\n\nTesting\n\n\nCompatibility Issues\n\n\nWriting Documentation\n\n\nSubmitting a Pull Request\n\n\n\n\n\n\n\n\nSubmission Guidelines\n\n\n\n\nSubmitting an issue\n\n\n\n\n\n\n\n\nGit Commit Guidelines\n\n\n\n\nCode of Conduct\n\n\n\n\n Got a question or problem?\n\n\nSearch for your question or problem in the \nexisting issues\n or \ncreate a \nnew issue\n to start a new discussion thread. \n\n\nBrowsing the code?\n\n\nWe work on two branches: \n- \nmaster\n for stable, released code\n- \ndev\n, a development branch. \n\n\nIt might be important to distinguish them when you are reading the commit history \nsearching for a feature or a bugfix, or when you are unsure of where to base your work from when contributing.\n\n\nFound a bug?\n\n\nWe would like to hear about it. Please [submit an issue][#submitting-an-issue] on GitHub and we will follow up. Even better, we would appreciate a [Pull Request][new-pr] with a fix for it!\n\n\n\n\nIf the bug was found in a release, it is best to base your work on \nmaster\n and submit your PR against it.\n\n\nIf the bug was found on \ndev\n (the development branch), base your work on \ndev\n and submit your PR against it.\n\n\n\n\nPlease follow the [Pull Request Guidelines][#submitting-a-pull-request].  \n\n\n Want a feature?\n\n\nFeel free to request a feature by [submitting an issue][new-issue] on GitHub and open the discussion.\n\n\nIf you'd like to implement a new feature, please consider opening an issue first to talk about it. It may be that somebody is already working on it, or that there are particular issues that you should be aware of before implementing the change. If you are about to open a Pull Request, please make sure to follow the [submissions guidelines][new-pr].\n\n\nContributing to the project\n\n\n\n\nFork the \nrsquarelabs/framework\n repository! \n\n\nClone the repository to your local machine. \n\n\nSelect an issue from \nrsquarelabs/framework\n to work on or \n\nsubmit a proposal\n of your own.\n\n\nCreate a feature or hotfix, or fix  branch depending on the type of issue.\n\n\nWrite the \ntests\n needed, take care of Python 2 \n 3 compatibility issues. \n\n\nModify existing or add new \n.md\n files to the docs directory.\n\n\nAs you work, build the documentation site locally to see your changes using \nmkdocs serve\n.\n\n\nCheck your writing for style and mechanical errors.\n\n\nSquash your commits on your branch.\n\n\nMake a pull request from your fork back to  \nmaster\n branch.\n\n\nWork with the reviewers until your change is approved and merged.\n\n\n\n\nSetting the Dev Env\n\n\nTo start developing on rsquarelabs/framework, clone the repo:\nFrom the root of the repository:\n\n\n# Clone the project\ngit clone git@github.com:rsquarelabs/framework.git\n\n# Create the virtual environment\nvirtualenv venv\n\n# Install requirements\nvenv/bin/pip install -r requirements/dev-requirements.txt\n\n# Activate the environment\nsource venv/bin/activate\n\n# Access the commands\npython sbin/r2_gromacs.py init # for gromacs module\npython sbin/r2_server_start # start the webclient in localhost\n\n\n\n\n\nNote:\n You do not need a database or to run migrate.\n\n\nAll the changes should broadly follow the \nPEP 8\n style conventions, \nand we recommend you set up your editor to automatically indicate non-conforming styles.\n\n\nTesting\n\n\n\n\nWrite tests for all the code that you write, which includes writing the unittests to integration tests. \n\n\nAlways try to test the compatibility with Python versions 2x and 3x.\n\n\n\n\nCompatibility Issues\n\n\nSometimes, in order to ensure your code works on various different versions of R2-Core framework, \nPython or third party libraries, you'll need to run slightly different code depending on the environment. \nAny code that branches in this way should be isolated into the \ncompat.py\n module, \nand should provide a single common interface that the rest of the codebase can use.\n\n\nWriting Documentation\n\n\nThe documentation for R2-Core framework is built from the \nMarkdown\n source files in the \n\ndocs\n directory.\n\n\nThere are many great Markdown editors that make working with the documentation really easy. Test the documentation by seeing \nyour changes using \nmkdocs serve\n. You should be able to access the documentation locally at \nhttp://localhost:8000\n\n\nSubmitting a Pull Request\n\n\nThe pull request (PR) process is in place so that we can ensure changes made to the \ncodes are the best changes possible. A good PR will do some or all of the following:\n\n\n\n\nExplain why the change is needed\n\n\nPoint out potential issues or questions\n\n\nAsk for help from experts in the company or the community\n\n\nEncourage feedback from core developers and others involved in creating the software being documented.\n\n\nCheck if the code is Python 2 \n 3 compatible. \n\n\n\n\nWriting a PR that is singular in focus and has clear objectives will encourage all of the above. \nDone correctly, the process allows reviewers (maintainers and community members) \nto validate the claims of the documentation and identify potential problems in communication or presentation\n\n\n\n\nFirst of all, make sure to base your work on the \ndev\n branch (the development branch):   a bugfix branch for dev would be prefixed by \nfix/\n\n  # a bugfix branch for master would be prefixed by \nhotfix/\n\n\n\n\n$ git checkout -b feature/my-feature dev\n\n\n\n\n\n\nPlease create commits containing \nrelated changes\n. For example, two different bugfixes should produce two separate commits. A feature should be made of commits splitted by \nlogical chunks\n (no half-done changes). Use your best judgement as to how many commits your changes require.\n\n\n\n\n\n\nWrite insightful and descriptive commit messages. Also add the issue number to make more sense for the issue.\n Please provide a summary in the first line (50-72 characters) along with the issue number \n#\nissue_number\n in the commit message.\n\n\n\n\n\n\nPlease \ninclude the appropriate test cases\n for your patch.\n\n\n\n\n\n\nMake sure all tests pass before submitting your changes. See the \nMakefile operations\n.\n\n\n\n\n\n\nMake sure the linter does not throw any error: \nmake lint\n.\n\n\n\n\n\n\nRebase your commits. It may be that new commits have been introduced on \ndev\n. Rebasing will update your branch with the most recent code and make your changes easier to review:\n\n\n\n\n\n\n$ git fetch \n git rebase origin/dev\n\n\n\n\nPush your changes:\n\n\n\n\n$ git push origin -u feature/my-feature\n\n\n\n\n\n\nOpen a pull request against the \ndev\n branch.\n\n\n\n\n\n\nIf we suggest changes:\n\n\n\n\nPlease make the required updates (after discussion if any)\n\n\n\n\nOnly create new commits if it makes sense. Generally, you will want to amend your latest commit or rebase your branch after the new changes:\n\n\n$ git rebase -i dev    # choose which commits to edit and perform the updates\n\n\n\n\n\n\nRe-run the test suite\n\n\n\n\n\n\nForce push to your branch:\n\n\n$ git push origin feature/my-feature -f\n\n\n\n\n\n\nOnce you've made a pull request take a look at the \nTravis build status\n in the GitHub interface and make sure \nthe tests are running as you'd expect.\nGitHub's documentation for working on pull requests is \navailable here\n.\n\n\nSubmitting an issue\n\n\nBefore you submit an issue, search the archive, maybe you will find that a similar one already exists.\n\n\nIf you are submitting an issue for a bug, please include the following:\n\n\n\n\nAn overview of the issue\n\n\nYour use case (why is this a bug for you?)\n\n\nThe version of rsquarelabs-core you are running\n\n\nThe platform you are running rsquarelabs-core on\n\n\nSteps to reproduce the issue\n\n\nLogfiles if available are helpful.\n\n\nIdeally, a suggested fix\n\n\n\n\nGit Commit Guidelines\n\n\nWe have very precise rules over how our git commit messages can be formatted. This leads to more readable messages that are easy to follow when looking through the project history. But also, we use the git commit messages to generate the AngularJS change log.\n\n\nThe commit message formatting can be added using a typical git workflow or through the use of a CLI wizard (\nCommitizen\n). To use the wizard, run npm run commit in your terminal after staging your changes in git.\n\n\nEvery Commit must be one of the following Type :\n\n\n\n\nfeat\n: A new feature\n\n\nfix\n: A bug fix\n\n\ndocs\n: Documentation only changes\n\n\nstyle\n: Changes that do not affect the meaning of the code (white-space, formatting, missing\n  semi-colons, etc)\n\n\nrefactor\n: A code change that neither fixes a bug nor adds a feature\n\n\nperf\n: A code change that improves performance\n\n\ntest\n: Adding missing tests\n\n\nchore\n: Changes to the build process or auxiliary tools and libraries such as documentation\n  generation\n\n\n\n\nCode of Conduct\n\n\nWe follow the code of conduct by \ncontributor-covenant.org\n\n\n\n\nWe are eager to see your contribution!\n\n\nWe collect all requests and ideas and share with the community for feedback, you should watch the milestones and issues for further roadmap updates.", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/about/contributing/#contributing", 
+            "text": "The best way to contribute to the roadmap and feature discussions is by talking with the RSQUARELABS Team and \nrsquarelabs-core Community in realtime through the Gitter chat, or by starting a  new issue  as a discussion thread.   Got a Question or Problem  Browsing the code  Found a Bug  Want a feature  Contributing to the project  Setting the Dev Env  Testing  Compatibility Issues  Writing Documentation  Submitting a Pull Request     Submission Guidelines   Submitting an issue     Git Commit Guidelines   Code of Conduct", 
+            "title": "Contributing"
+        }, 
+        {
+            "location": "/about/release-notes/", 
+            "text": "Release Management\n\n\nVersioning\n\n\nMinor version numbers (0.0.x) are used for changes that are API compatible. You should be able to upgrade between minor point releases without any other code changes.\n\n\nMedium version numbers (0.x.0) may include API changes, in line with the deprecation policy. You should read the release notes carefully before upgrading between medium point releases.\n\n\nMajor version numbers (x.0.0) are reserved for substantial project milestones.\n\n\nRelease process\n\n\nThe release manager is selected on every quarterly maintenance cycle.\n\n\n\n\nThe manager should be selected by \n@rrmerugu\n.\n\n\nThe manager will then have the maintainer role added to PyPI package.\n\n\nThe previous manager will then have the maintainer role removed from the PyPI package.\n\n\n\n\nOur PyPI releases will be handled by either the current release manager, or by \n@rrmerugu\n. \nEvery release should have an open issue tagged with the Release label and marked against the appropriate milestone.\n\n\nThe following template should be used for the description of the issue, and serves as a release checklist.\n\n\nRelease manager is @***.\nPull request is #***.\n\nDuring development cycle:\n\n- [ ] Upload the new content to be translated to [transifex](https://github.com/rsquarelabs/framework/about/project-management/#translations).\n\n\nChecklist:\n\n- [ ] Create pull request for [release notes](https://github.com/rsquarelabs/framework/blob/master/docs/topics/release-notes.md) based on the [*.*.* milestone](https://github.com/rsquarelabs/framework/milestones/***).\n- [ ] Ensure the pull request increments the version to `*.*.*` in [`rsquarelabs_core/__init__.py`](https://github.com/rsquarelabs/framework/blob/master/rsquarelabs_core/__init__.py).\n- [ ] Confirm with @rrmerugu that release is finalized and ready to go.\n- [ ] Ensure that release date is included in pull request.\n- [ ] Merge the release pull request.\n- [ ] Push the package to PyPI with `./setup.py publish`.\n- [ ] Tag the release, with `git tag -a *.*.* -m 'version *.*.*'; git push --tags`.\n- [ ] Deploy the documentation with `mkdocs gh-deploy`.\n- [ ] Make a release announcement on the [discussion group](https://groups.google.com/forum/?fromgroups#!forum/django-rest-framework).\n- [ ] Make a release announcement on twitter.\n- [ ] Close the milestone on GitHub.\n\nTo modify this process for future releases make a pull request to the [project management](https://rsquarelabs.github.com/framework/about/project-management/) documentation.", 
+            "title": "Release Management"
+        }, 
+        {
+            "location": "/about/release-notes/#release-management", 
+            "text": "", 
+            "title": "Release Management"
+        }, 
+        {
+            "location": "/about/release-notes/#versioning", 
+            "text": "Minor version numbers (0.0.x) are used for changes that are API compatible. You should be able to upgrade between minor point releases without any other code changes.  Medium version numbers (0.x.0) may include API changes, in line with the deprecation policy. You should read the release notes carefully before upgrading between medium point releases.  Major version numbers (x.0.0) are reserved for substantial project milestones.", 
+            "title": "Versioning"
+        }, 
+        {
+            "location": "/about/release-notes/#release-process", 
+            "text": "The release manager is selected on every quarterly maintenance cycle.   The manager should be selected by  @rrmerugu .  The manager will then have the maintainer role added to PyPI package.  The previous manager will then have the maintainer role removed from the PyPI package.   Our PyPI releases will be handled by either the current release manager, or by  @rrmerugu . \nEvery release should have an open issue tagged with the Release label and marked against the appropriate milestone.  The following template should be used for the description of the issue, and serves as a release checklist.  Release manager is @***.\nPull request is #***.\n\nDuring development cycle:\n\n- [ ] Upload the new content to be translated to [transifex](https://github.com/rsquarelabs/framework/about/project-management/#translations).\n\n\nChecklist:\n\n- [ ] Create pull request for [release notes](https://github.com/rsquarelabs/framework/blob/master/docs/topics/release-notes.md) based on the [*.*.* milestone](https://github.com/rsquarelabs/framework/milestones/***).\n- [ ] Ensure the pull request increments the version to `*.*.*` in [`rsquarelabs_core/__init__.py`](https://github.com/rsquarelabs/framework/blob/master/rsquarelabs_core/__init__.py).\n- [ ] Confirm with @rrmerugu that release is finalized and ready to go.\n- [ ] Ensure that release date is included in pull request.\n- [ ] Merge the release pull request.\n- [ ] Push the package to PyPI with `./setup.py publish`.\n- [ ] Tag the release, with `git tag -a *.*.* -m 'version *.*.*'; git push --tags`.\n- [ ] Deploy the documentation with `mkdocs gh-deploy`.\n- [ ] Make a release announcement on the [discussion group](https://groups.google.com/forum/?fromgroups#!forum/django-rest-framework).\n- [ ] Make a release announcement on twitter.\n- [ ] Close the milestone on GitHub.\n\nTo modify this process for future releases make a pull request to the [project management](https://rsquarelabs.github.com/framework/about/project-management/) documentation.", 
+            "title": "Release process"
+        }, 
+        {
+            "location": "/about/project-management/", 
+            "text": "Project management\n\n\nThis document outlines our project management processes for R2-Core Framework.\n\n\nThe aim is to ensure that the project has a high \n\"bus factor\"\n, and can continue to remain well\n supported for the foreseeable future. Suggestions for improvements to our process are welcome.\n\n\nMaintenance team\n\n\nWe have a quarterly maintenance cycle where new members may join the maintenance team. \nWe currently cap the size of the team at 5 members, and may encourage folks to step out of the \nteam for a cycle to allow new members to participate.\n\n\nCurrent Team\n\n\nThe current maintenance team includes:\n\n\n\n\n@rrmerugu\n\n\n@nitish515\n\n\n\n\nMaintenance cycles\n\n\nEach maintenance cycle is initiated by an issue being opened with the \nProcess\n label.\n\n\nTo be considered for a maintainer role simply comment against the issue.\nExisting members must explicitly opt-in to the next cycle by check-marking their name.\nThe final decision on the incoming team will be made by \n@rrmerugu\n\n\nMembers of the maintenance team will be added as collaborators to the repository.\n\n\nResponsibilities of team members.\n\n\nTeam members have the following responsibilities.\n\n\n\n\nClose invalid or resolved tickets.\n\n\nAdd triage labels and milestones to tickets.\n\n\nMerge finalized pull requests.\n\n\nBuild and deploy the documentation, using \nmkdocs gh-deploy\n.\n\n\nBuild and update the included translation packs.\n\n\n\n\nFurther notes for maintainers:\n\n\n\n\nCode changes should come in the form of a pull request - do not push directly to master.\n\n\nMaintainers should typically not merge their own pull requests.\n\n\nEach issue/pull request should have exactly one label once triaged.\n\n\nSearch for un-triaged issues with \nis:open no:label\n.\n\n\n\n\nIt should be noted that participating actively in this project clearly \n\n does not require being part of the maintenance team\n. Almost every import part of issue triage and project \nimprovement can be actively worked on regardless of your collaborator status on the repository.\n\n\nProject requirements\n\n\nAll our test requirements are pinned to exact versions, in order to ensure that our test runs are reproducible. \nWe maintain the requirements in the \nrequirements\n directory. The requirements files are referenced from the \ntox.ini\n\nconfiguration file, ensuring we have a single source of truth for package versions used in testing.\n\n\nPackage upgrades should generally be treated as isolated pull requests. You can check if there are any packages available at \na newer version, by using the \npip list --outdated\n.\n\n\nProject ownership\n\n\nThe PyPI package is owned by \n@rrmerugu\n. As a backup \n@shivamsk\n also has ownership of the package.\n\n\nIf \n@rrmerugu\n ceases to participate in the project then \n@shivamsk\n has responsibility for handing over ownership duties.", 
+            "title": "Project Management"
+        }, 
+        {
+            "location": "/about/project-management/#project-management", 
+            "text": "This document outlines our project management processes for R2-Core Framework.  The aim is to ensure that the project has a high  \"bus factor\" , and can continue to remain well\n supported for the foreseeable future. Suggestions for improvements to our process are welcome.", 
+            "title": "Project management"
+        }, 
+        {
+            "location": "/about/project-management/#maintenance-team", 
+            "text": "We have a quarterly maintenance cycle where new members may join the maintenance team. \nWe currently cap the size of the team at 5 members, and may encourage folks to step out of the \nteam for a cycle to allow new members to participate.", 
+            "title": "Maintenance team"
+        }, 
+        {
+            "location": "/about/project-management/#current-team", 
+            "text": "The current maintenance team includes:   @rrmerugu  @nitish515", 
+            "title": "Current Team"
+        }, 
+        {
+            "location": "/about/project-management/#maintenance-cycles", 
+            "text": "Each maintenance cycle is initiated by an issue being opened with the  Process  label.  To be considered for a maintainer role simply comment against the issue.\nExisting members must explicitly opt-in to the next cycle by check-marking their name.\nThe final decision on the incoming team will be made by  @rrmerugu  Members of the maintenance team will be added as collaborators to the repository.", 
+            "title": "Maintenance cycles"
+        }, 
+        {
+            "location": "/about/project-management/#responsibilities-of-team-members", 
+            "text": "Team members have the following responsibilities.   Close invalid or resolved tickets.  Add triage labels and milestones to tickets.  Merge finalized pull requests.  Build and deploy the documentation, using  mkdocs gh-deploy .  Build and update the included translation packs.   Further notes for maintainers:   Code changes should come in the form of a pull request - do not push directly to master.  Maintainers should typically not merge their own pull requests.  Each issue/pull request should have exactly one label once triaged.  Search for un-triaged issues with  is:open no:label .   It should be noted that participating actively in this project clearly   does not require being part of the maintenance team . Almost every import part of issue triage and project \nimprovement can be actively worked on regardless of your collaborator status on the repository.", 
+            "title": "Responsibilities of team members."
+        }, 
+        {
+            "location": "/about/project-management/#project-requirements", 
+            "text": "All our test requirements are pinned to exact versions, in order to ensure that our test runs are reproducible. \nWe maintain the requirements in the  requirements  directory. The requirements files are referenced from the  tox.ini \nconfiguration file, ensuring we have a single source of truth for package versions used in testing.  Package upgrades should generally be treated as isolated pull requests. You can check if there are any packages available at \na newer version, by using the  pip list --outdated .", 
+            "title": "Project requirements"
+        }, 
+        {
+            "location": "/about/project-management/#project-ownership", 
+            "text": "The PyPI package is owned by  @rrmerugu . As a backup  @shivamsk  also has ownership of the package.  If  @rrmerugu  ceases to participate in the project then  @shivamsk  has responsibility for handing over ownership duties.", 
+            "title": "Project ownership"
         }
     ]
 }
