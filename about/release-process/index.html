@@ -190,11 +190,9 @@
         
             <li><a href="#supported-versions">Supported versions</a></li>
         
-            <li><a href="#release-process">Release process</a></li>
-        
             <li><a href="#release-cycle">Release cycle</a></li>
         
-            <li><a href="#phase-three-bugfixes">Phase three: bugfixes</a></li>
+            <li><a href="#bug-fix-releases">Bug-fix releases</a></li>
         
     
     </ul>
@@ -287,25 +285,6 @@ of rsquarelabs-core 5.1 and 5.2. At this point in time:</p>
 </li>
 </ul>
 <hr />
-<h2 id="release-process"><a class="toclink" href="#release-process">Release process</a></h2>
-<p>The release manager is selected on every quarterly maintenance cycle.</p>
-<ol>
-<li>
-<p>The manager should be selected by <a href="https://github.com/rrmerugu">@rrmerugu</a>.</p>
-</li>
-<li>
-<p>The manager will then have the maintainer role added to PyPI package.</p>
-</li>
-<li>
-<p>The previous manager will then have the maintainer role removed from the PyPI package.</p>
-</li>
-</ol>
-<p>Our PyPI releases will be handled by either the current release manager, or by <a href="https://github.com/rrmerugu">@rrmerugu</a>. 
-Every release should have an open issue tagged with the Release label and marked against the appropriate milestone.</p>
-<p>The following template should be used for the description of the issue, and serves as a release checklist.</p>
-<p>rsquarelabs-core uses a time-based release schedule, with feature releases every eight months or so.
-After each feature release, the release manager will announce a timeline for the next feature release.</p>
-<hr />
 <h2 id="release-cycle"><a class="toclink" href="#release-cycle">Release cycle</a></h2>
 <p>Each release cycle consists of three parts:</p>
 <h3 id="phase-one-feature-proposal"><a class="toclink" href="#phase-one-feature-proposal">Phase one: feature proposal</a></h3>
@@ -315,35 +294,20 @@ After each feature release, the release manager will announce a timeline for the
 <p>The second part of the release schedule is the “heads-down” working period. Using the roadmap produced at the end of phase one, we’ll all work very hard to get everything on it done.</p>
 <p>At the end of phase two, any unfinished features will be postponed until the next release.</p>
 <p>Phase two will culminate with an alpha release. At this point, the stable/A.B.x branch will be forked from master.</p>
-<hr />
-<h2 id="phase-three-bugfixes"><a class="toclink" href="#phase-three-bugfixes">Phase three: bugfixes</a></h2>
-<p>The last part of a release cycle is spent fixing bugs – no new features will be accepted during this time. We’ll try to release a beta release one month after the alpha and a release candidate one month after the beta.</p>
+<h3 id="phase-three-bugfixes"><a class="toclink" href="#phase-three-bugfixes">Phase three: bugfixes</a></h3>
+<p>The last third of a release cycle is spent fixing bugs – no new features will be accepted during this time. We’ll try to release a beta release after one month and a release candidate after two months.</p>
 <p>The release candidate marks the string freeze, and it happens at least two weeks before the final release. After this point, new translatable strings must not be added.</p>
-<p>During this phase, committe</p>
-<pre><code>Release manager is @***.
-Pull request is #***.
-
-During development cycle:
-
-- [ ] Upload the new content to be translated to [transifex](https://github.com/rsquarelabs/rsquarelabs-core/about/project-management/#translations).
-
-
-Checklist:
-
-- [ ] Create pull request for [release notes](https://github.com/rsquarelabs/rsquarelabs-core/blob/master/docs/topics/release-notes.md) based on the [*.*.* milestone](https://github.com/rsquarelabs/rsquarelabs-core/milestones/***).
-- [ ] Ensure the pull request increments the version to `*.*.*` in [`rsquarelabs_core/__init__.py`](https://github.com/rsquarelabs/rsquarelabs-core/blob/master/rsquarelabs_core/__init__.py).
-- [ ] Confirm with @rrmerugu that release is finalized and ready to go.
-- [ ] Ensure that release date is included in pull request.
-- [ ] Merge the release pull request.
-- [ ] Push the package to PyPI with `./setup.py publish`.
-- [ ] Tag the release, with `git tag -a *.*.* -m 'version *.*.*'; git push --tags`.
-- [ ] Deploy the documentation with `mkdocs gh-deploy`.
-- [ ] Make a release announcement on twitter.
-- [ ] Close the milestone on GitHub.
-
-To modify this process for future releases make a pull request to the [project management](http://rsquarelabs.github.io/rsquarelabs-core/about/project-management/) documentation.
-
-</code></pre></div>
+<p>During this phase, committers will be more and more conservative with backports, to avoid introducing regressions. After the release candidate, only release blockers and documentation fixes should be backported.</p>
+<p>In parallel to this phase, <strong>master</strong> can receive new features, to be released in the <strong>A.B+1</strong> cycle.</p>
+<hr />
+<h2 id="bug-fix-releases"><a class="toclink" href="#bug-fix-releases">Bug-fix releases</a></h2>
+<p>After a major release (e.g. A.B), the previous release will go into bugfix mode.</p>
+<p>The branch for the previous major release (e.g. <strong>stable/A.B-1.x</strong>) will include 
+bugfixes. Critical bugs fixed on master must also be fixed on the bugfix branch; 
+this means that commits need to cleanly separate bug fixes from feature additions. 
+The developer who commits a fix to master will be responsible for also applying 
+the fix to the current bugfix branch.</p>
+<hr /></div>
         </div>
 
         <footer class="col-md-12">

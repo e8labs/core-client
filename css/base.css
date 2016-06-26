@@ -236,11 +236,14 @@ body {
 .dropdown-menu>li>a {
     padding: 8px 15px !important;
 }
-p, ul li, ol li{
-    line-height:1.9em;
+p, ul li, ol li, ul li p, ol li p {
+    line-height:1.6em;
 }
 ul.nav li {
     line-height: 1.4em;
+}
+ul li p, ol li p {
+    margin-bottom:0;
 }
 
 pre{
