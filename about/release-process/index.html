@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/about/release-notes/">
+        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/about/release-process/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Release Management - R2-CORE Framework</title>
+	<title>Release Process - R2-CORE Framework</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -131,14 +131,14 @@
 
                     
                         
-<li class="active">
-    <a href="./">Release Management</a>
+<li >
+    <a href="../project-management/">Project Management</a>
 </li>
 
                     
                         
-<li >
-    <a href="../project-management/">Project Management</a>
+<li class="active">
+    <a href="./">Release Process</a>
 </li>
 
                     
@@ -156,12 +156,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../contributing/">
+                    <a rel="next" href="../project-management/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../project-management/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -186,9 +186,15 @@
     
         <li class="main active"><a href="#release-management">Release Management</a></li>
         
-            <li><a href="#versioning">Versioning</a></li>
+            <li><a href="#release-versioning">Release Versioning</a></li>
+        
+            <li><a href="#supported-versions">Supported versions</a></li>
         
             <li><a href="#release-process">Release process</a></li>
+        
+            <li><a href="#release-cycle">Release cycle</a></li>
+        
+            <li><a href="#phase-three-bugfixes">Phase three: bugfixes</a></li>
         
     
     </ul>
@@ -196,20 +202,124 @@
             <div class="col-md-9" role="main">
 
 <h1 id="release-management"><a class="toclink" href="#release-management">Release Management</a></h1>
-<h2 id="versioning"><a class="toclink" href="#versioning">Versioning</a></h2>
-<p>Minor version numbers (0.0.x) are used for changes that are API compatible. You should be able to upgrade between minor point releases without any other code changes.</p>
-<p>Medium version numbers (0.x.0) may include API changes, in line with the deprecation policy. You should read the release notes carefully before upgrading between medium point releases.</p>
-<p>Major version numbers (x.0.0) are reserved for substantial project milestones.</p>
+<h2 id="release-versioning"><a class="toclink" href="#release-versioning">Release Versioning</a></h2>
+<p>Since version 1.0, rsquarelabs-core’s release numbering works as follows:</p>
+<ul>
+<li>
+<p>Versions are numbered in the form <strong>A.B</strong> or <strong>A.B.C</strong>.</p>
+</li>
+<li>
+<p><strong>A.B</strong> is the feature release version number. Each version will be 
+mostly backwards compatible with the previous release. Exceptions to this 
+rule will be listed in the release notes.</p>
+</li>
+<li>
+<p><strong>C</strong> is the patch release version number, which is incremented for 
+bugfix and security releases. 
+These releases will be 100% backwards-compatible with the previous patch release. 
+The only exception is when a security or data loss issue can’t be fixed without breaking 
+backwards-compatibility. If this happens, the release notes will provide detailed upgrade instructions.</p>
+</li>
+<li>
+<p>Before a new feature release, we’ll make alpha, beta, and release candidate releases. 
+These are of the form <strong>A.B alpha/beta/rc N</strong>, which means the <strong>Nth alpha/beta/release</strong> candidate of version <strong>A.B</strong>.</p>
+</li>
+</ul>
+<p>In git, each release will have a tag indicating its version number, signed 
+with the release key. Additionally, each release series has its own branch, 
+called <strong>stable/A.B.x</strong>, and bugfix/security releases will be issued from those branches.</p>
+<h3 id="feature-release"><a class="toclink" href="#feature-release">Feature release</a></h3>
+<p>Feature releases (A.B, A.B+1, etc.) will happen roughly every eight months – see release process for details. These releases will contain new features, improvements to existing features, and such.</p>
+<h3 id="patch-release"><a class="toclink" href="#patch-release">Patch release</a></h3>
+<p>Patch releases (A.B.C, A.B.C+1, etc.) will be issued as needed, to fix bugs and/or security issues.</p>
+<p>These releases will be 100% compatible with the associated feature release, unless this is 
+impossible for security reasons or to prevent data loss. So the answer to “should I upgrade 
+to the latest patch release?” will always be “yes.”</p>
+<h3 id="long-term-support-release"><a class="toclink" href="#long-term-support-release">Long-term support release</a></h3>
+<p>Certain feature releases will be designated as long-term support (LTS) releases. These releases will get security and data loss fixes applied for a guaranteed period of time, typically three years.</p>
+<hr />
+<h2 id="supported-versions"><a class="toclink" href="#supported-versions">Supported versions</a></h2>
+<p>At any moment in time, developer team will support a set of releases to varying levels.</p>
+<ul>
+<li>
+<p>The current development master will get new features and bug fixes requiring non-trivial refactoring.</p>
+</li>
+<li>
+<p>Patches applied to the master branch must also be applied to the last feature release branch, to be released in the next patch release of that feature series, when they fix critical problems:</p>
+<ul>
+<li>Security issues.</li>
+<li>Data loss bugs.</li>
+<li>Crashing bugs.</li>
+<li>Major functionality bugs in newly-introduced features.</li>
+<li>Regressions from older versions of rsquarelabs-core.</li>
+</ul>
+</li>
+</ul>
+<p>The rule of thumb is that fixes will be backported to the last feature release 
+for bugs that would have prevented a release in the first place (release blockers).</p>
+<ul>
+<li>
+<p>Security fixes and data loss bugs will be applied to the current master, 
+the last two feature release branches, and any other supported long-term 
+support release branches.</p>
+</li>
+<li>
+<p>Documentation fixes generally will be more freely backported to the last 
+release branch. That’s because it’s highly advantageous to have the docs 
+for the last release be up-to-date and correct, and the risk of introducing 
+regressions is much less of a concern.</p>
+</li>
+<li>
+<p>As a concrete example, consider a moment in time halfway between the release 
+of rsquarelabs-core 5.1 and 5.2. At this point in time:</p>
+</li>
+<li>
+<p>Features will be added to development master, to be released as rsquarelabs-core 5.2.</p>
+</li>
+<li>
+<p>Critical bug fixes will be applied to the stable/5.1.x branch, and released as 5.1.1, 5.1.2, etc.</p>
+</li>
+<li>
+<p>Security fixes and bug fixes for data loss issues will be applied to master and to the stable/5.1.x, stable/5.0.x, and stable/4.2.x (LTS) branches. They will trigger the release of 5.1.1, 5.0.5, 4.2.8, etc.</p>
+</li>
+<li>
+<p>Documentation fixes will be applied to master, and, if easily backported, to the latest stable branch, 5.1.x.</p>
+</li>
+</ul>
+<hr />
 <h2 id="release-process"><a class="toclink" href="#release-process">Release process</a></h2>
 <p>The release manager is selected on every quarterly maintenance cycle.</p>
 <ol>
-<li>The manager should be selected by <a href="https://github.com/rrmerugu">@rrmerugu</a>.</li>
-<li>The manager will then have the maintainer role added to PyPI package.</li>
-<li>The previous manager will then have the maintainer role removed from the PyPI package.</li>
+<li>
+<p>The manager should be selected by <a href="https://github.com/rrmerugu">@rrmerugu</a>.</p>
+</li>
+<li>
+<p>The manager will then have the maintainer role added to PyPI package.</p>
+</li>
+<li>
+<p>The previous manager will then have the maintainer role removed from the PyPI package.</p>
+</li>
 </ol>
 <p>Our PyPI releases will be handled by either the current release manager, or by <a href="https://github.com/rrmerugu">@rrmerugu</a>. 
 Every release should have an open issue tagged with the Release label and marked against the appropriate milestone.</p>
 <p>The following template should be used for the description of the issue, and serves as a release checklist.</p>
+<p>rsquarelabs-core uses a time-based release schedule, with feature releases every eight months or so.
+After each feature release, the release manager will announce a timeline for the next feature release.</p>
+<hr />
+<h2 id="release-cycle"><a class="toclink" href="#release-cycle">Release cycle</a></h2>
+<p>Each release cycle consists of three parts:</p>
+<h3 id="phase-one-feature-proposal"><a class="toclink" href="#phase-one-feature-proposal">Phase one: feature proposal</a></h3>
+<p>The first phase of the release process will include figuring out what major features to include in the next version. This should include a good deal of preliminary work on those features – working code trumps grand design.</p>
+<p>Major features for an upcoming release will be added to the wiki roadmap page, e.g. https://github.com/rsquarelabs/rsquarelabs-core/wiki/ROADMAP.</p>
+<h3 id="phase-two-development"><a class="toclink" href="#phase-two-development">Phase two: development</a></h3>
+<p>The second part of the release schedule is the “heads-down” working period. Using the roadmap produced at the end of phase one, we’ll all work very hard to get everything on it done.</p>
+<p>At the end of phase two, any unfinished features will be postponed until the next release.</p>
+<p>Phase two will culminate with an alpha release. At this point, the stable/A.B.x branch will be forked from master.</p>
+<hr />
+<h2 id="phase-three-bugfixes"><a class="toclink" href="#phase-three-bugfixes">Phase three: bugfixes</a></h2>
+<p>The last part of a release cycle is spent fixing bugs – no new features will be accepted during this time. We’ll try to release a beta release one month after the alpha and a release candidate one month after the beta.</p>
+<p>The release candidate marks the string freeze, and it happens at least two weeks before the final release. After this point, new translatable strings must not be added.</p>
+<p>During this phase, committe</p>
 <pre><code>Release manager is @***.
 Pull request is #***.
 
@@ -228,7 +338,6 @@ Checklist:
 - [ ] Push the package to PyPI with `./setup.py publish`.
 - [ ] Tag the release, with `git tag -a *.*.* -m 'version *.*.*'; git push --tags`.
 - [ ] Deploy the documentation with `mkdocs gh-deploy`.
-- [ ] Make a release announcement on the [discussion group](https://groups.google.com/forum/?fromgroups#!forum/django-rest-framework).
 - [ ] Make a release announcement on twitter.
 - [ ] Close the milestone on GitHub.
 
