@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/dev-guide/setting-environment/">
+        <link rel="canonical" href="http://developers.rsquarelabs.com/core-client/dev-guide/setting-environment/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Environment Setup - R2-CORE Framework</title>
+	<title>Environment Setup - R2-Core Client</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -51,7 +51,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href="../..">R2-CORE Framework</a>
+            <a class="navbar-brand" href="../..">R2-Core Client</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -173,7 +173,7 @@
                 </li>
                 
                 <li>
-                    <a href="https://github.com/rsquarelabs/framework">
+                    <a href="https://github.com/rsquarelabs/core-client">
                         
                             <i class="fa fa-github"></i>
                         
@@ -197,6 +197,8 @@
             <li><a href="#file-system">File system</a></li>
         
             <li><a href="#accessing-the-command">Accessing the command</a></li>
+        
+            <li><a href="#starting-the-client-server">Starting the client server</a></li>
         
     
     </ul>
@@ -235,7 +237,7 @@ but to simulate that behaviour in the development, we can create alias for these
 add these commands in <code>.bashrc</code> ie., <code>gedit ~/.bashrc</code></p>
 <p>add the following lines </p>
 <pre><code class="bash">alias r2_gromacs='python2.7 /home/&lt;USERNAME&gt;/&lt;R2-core-client-PATH&gt;/sbin/r2_gromacs.py'
-alias r2_server_start='python2.7 /home/&lt;USERNAME&gt;/&lt;R2-core-client-framework-PATH&gt;/sbin/r2_server_start.py'
+alias r2_server_start='python2.7 /home/&lt;USERNAME&gt;/&lt;R2-core-client-PATH&gt;/sbin/r2_server_start.py'
 </code></pre>
 
 <p>Example:</p>
@@ -249,7 +251,10 @@ alias r2_server_start='python2.7 /home/rrmerugu/PycharmProjects/rsquarelabs-core
 
 </code></pre>
 
-<p>restart the terminal or do <code>source ~/.bashrc</code> to enable these commands for first time.</p></div>
+<p>restart the terminal or do <code>source ~/.bashrc</code> to enable these commands for first time.</p>
+<h2 id="starting-the-client-server"><a class="toclink" href="#starting-the-client-server">Starting the client server</a></h2>
+<p>Use the command <code>r2_server_start</code> to start the local client server, which is based on <a href="http://bottlepy.org">bottle.py</a>.
+It is accessible at <a href="http://localhost:9090">http://localhost:9090</a></p></div>
         </div>
 
         <footer class="col-md-12">
