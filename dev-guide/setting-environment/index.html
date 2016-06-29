@@ -206,10 +206,14 @@
 <h1 id="development-env-setup"><a class="toclink" href="#development-env-setup">Development Env Setup</a></h1>
 <p>This is the first time setup doc for the developers.</p>
 <h2 id="first-time-installation"><a class="toclink" href="#first-time-installation">First time installation</a></h2>
-<pre><code class="bash">git clone https://github.com/rsquarelabs/framework
+<pre><code class="bash">git clone https://github.com/rsquarelabs/core-client
 virtualenv venv
 source venv/bin/activate
-pip2.7 install -r requirements.txt
+# Use pip2.7 not pip, because pip might be linked to pip3 in some versions
+pip2.7 install -r requirements/requirements.txt
+pip2.7 install -r requirements/dev-requirements.txt
+pip2.7 install -r requirements/testing-requirements.txt 
+
 </code></pre>
 
 <p>Install Gromacs (www.gromacs.org)</p>
@@ -230,11 +234,22 @@ pip2.7 install -r requirements.txt
 but to simulate that behaviour in the development, we can create alias for these commands in <code>.bashrc</code> or add a softlink, here is how to
 add these commands in <code>.bashrc</code> ie., <code>gedit ~/.bashrc</code></p>
 <p>add the following lines </p>
-<pre><code class="bash">alias r2_gromacs='python /home/&lt;USERNAME&gt;/&lt;R2-CORE-framework-PATH&gt;/sbin/r2_gromacs.py'
-alias r2_server_start='python /home/&lt;USERNAME&gt;/&lt;R2-CORE-framework-PATH&gt;/sbin/r2_server_start.py'
+<pre><code class="bash">alias r2_gromacs='python2.7 /home/&lt;USERNAME&gt;/&lt;R2-core-client-PATH&gt;/sbin/r2_gromacs.py'
+alias r2_server_start='python2.7 /home/&lt;USERNAME&gt;/&lt;R2-core-client-framework-PATH&gt;/sbin/r2_server_start.py'
 </code></pre>
 
-<p>restart the terminal or do <code>source ~/.bashrc</code> to enable these commands for first time</p></div>
+<p>Example:</p>
+<pre><code class="bash"># In Mac
+alias r2_gromacs='python2.7 /Users/rrmerugu/PycharmProjects/rsquarelabs-core/sbin/r2_gromacs.py'
+alias r2_server_start='python2.7 /Users/rrmerugu/PycharmProjects/rsquarelabs-core/sbin/r2_server_start.py'
+
+# In Linux
+alias r2_gromacs='python2.7 /home/rrmerugu/PycharmProjects/rsquarelabs-core/sbin/r2_gromacs.py'
+alias r2_server_start='python2.7 /home/rrmerugu/PycharmProjects/rsquarelabs-core/sbin/r2_server_start.py'
+
+</code></pre>
+
+<p>restart the terminal or do <code>source ~/.bashrc</code> to enable these commands for first time or use <code>source ~/.bashrc</code></p></div>
         </div>
 
         <footer class="col-md-12">
