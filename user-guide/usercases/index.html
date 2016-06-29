@@ -6,15 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/">
-        <link rel="shortcut icon" href="./img/favicon.ico">
+        <link rel="canonical" href="http://docs.rsquarelabs.com/sdk/framework/user-guide/usercases/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>R2-CORE Framework</title>
+	<title>Use Cases - R2-CORE Framework</title>
 
-        <link href="./css/bootstrap-custom.min.css" rel="stylesheet">
-        <link href="./css/font-awesome-4.0.3.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/highlight.css">
-        <link href="./css/base.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../css/base.css" rel="stylesheet">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
@@ -51,7 +51,7 @@
             </button>
 
             <!-- Main title -->
-            <a class="navbar-brand" href=".">R2-CORE Framework</a>
+            <a class="navbar-brand" href="../..">R2-CORE Framework</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -60,25 +60,25 @@
             <ul class="nav navbar-nav">
             
             
-                <li class="active">
-                    <a href=".">Home</a>
+                <li >
+                    <a href="../..">Home</a>
                 </li>
             
             
             
-                <li class="dropdown">
+                <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
                         
 <li >
-    <a href="user-guide/tutorial/">Tutorials</a>
+    <a href="../tutorial/">Tutorials</a>
 </li>
 
                     
                         
-<li >
-    <a href="user-guide/usercases/">Use Cases</a>
+<li class="active">
+    <a href="./">Use Cases</a>
 </li>
 
                     
@@ -93,25 +93,25 @@
                     
                         
 <li >
-    <a href="dev-guide/modules/project/">Project</a>
+    <a href="../../dev-guide/modules/project/">Project</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/modules/gromacs/">Gromacs</a>
+    <a href="../../dev-guide/modules/gromacs/">Gromacs</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/documentation/">Documentation</a>
+    <a href="../../dev-guide/documentation/">Documentation</a>
 </li>
 
                     
                         
 <li >
-    <a href="dev-guide/setting-environment/">Environment Setup</a>
+    <a href="../../dev-guide/setting-environment/">Environment Setup</a>
 </li>
 
                     
@@ -126,25 +126,25 @@
                     
                         
 <li >
-    <a href="about/license/">License</a>
+    <a href="../../about/license/">License</a>
 </li>
 
                     
                         
 <li >
-    <a href="about/contributing/">Contributing</a>
+    <a href="../../about/contributing/">Contributing</a>
 </li>
 
                     
                         
 <li >
-    <a href="about/project-management/">Project Management</a>
+    <a href="../../about/project-management/">Project Management</a>
 </li>
 
                     
                         
 <li >
-    <a href="about/release-process/">Release Process</a>
+    <a href="../../about/release-process/">Release Process</a>
 </li>
 
                     
@@ -161,13 +161,13 @@
                         <i class="fa fa-search"></i> Search
                     </a>
                 </li>
-                <li class="disabled">
-                    <a rel="next" >
+                <li >
+                    <a rel="next" href="../tutorial/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="user-guide/tutorial/">
+                    <a rel="prev" href="../../dev-guide/modules/project/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -190,93 +190,14 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#introduction">Introduction</a></li>
-        
-            <li><a href="#requirements">Requirements</a></li>
-        
-            <li><a href="#installation">Installation</a></li>
-        
-            <li><a href="#quickstart">Quickstart</a></li>
-        
-            <li><a href="#tutorial">Tutorial</a></li>
-        
-            <li><a href="#development">Development</a></li>
-        
-            <li><a href="#support">Support</a></li>
-        
-            <li><a href="#security">Security</a></li>
-        
-            <li><a href="#license">License</a></li>
+        <li class="main active"><a href="#use-cases">Use Cases</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="introduction"><a class="toclink" href="#introduction">Introduction</a></h1>
-<p>R2-core framework is a powerful and flexible toolkit for tracking the 
-Scientific Research, automation and building Intelligence for creating 
-<strong>Personal Research Assistance</strong>. </p>
-<p>Some reasons you might want to use rsquarelabs-core:</p>
-<ul>
-<li>
-<p>Tracking the research </p>
-</li>
-<li>
-<p>Creating scientific protocols that you can share accross.</p>
-</li>
-<li>
-<p>Automating the Research </p>
-</li>
-</ul>
-<h2 id="requirements"><a class="toclink" href="#requirements">Requirements</a></h2>
-<p>rsquarelabs-core framework requires the following:</p>
-<ol>
-<li>Python 2.7 </li>
-<li>Linux or Unix based Operating system. (We give our best support Ubuntu &gt;= 14.04 &amp; Mac OS &gt;= 10.11)</li>
-</ol>
-<h2 id="installation"><a class="toclink" href="#installation">Installation</a></h2>
-<p>Install using <code>pip</code>, including any optional packages you want...</p>
-<pre><code>pip install rsquarelabs-core
-</code></pre>
-
-<p>...or clone the project from github.</p>
-<pre><code>git clone git@github.com:rsquarelabs/rsquarelabs-core.git
-</code></pre>
-
-<h2 id="quickstart"><a class="toclink" href="#quickstart">Quickstart</a></h2>
-<p>Can't wait to get started? The <a href="">quickstart guide</a> is the fastest way to 
-get up and running, and research.</p>
-<h2 id="tutorial"><a class="toclink" href="#tutorial">Tutorial</a></h2>
-<p>The tutorial will walk you through the building blocks that make up rsquarelabs-core.
- It'll take a little while to get through, but it'll give you a comprehensive 
- understanding of how everything fits together, and is highly recommended reading.</p>
-<h2 id="development"><a class="toclink" href="#development">Development</a></h2>
-<p>See the <a href="about/contributing/">Contribution guidelines</a> for information on how to clone the repository, 
-run the test suite and contribute changes back to rsquarelabs-core.</p>
-<h2 id="support"><a class="toclink" href="#support">Support</a></h2>
-<p>For support, please raise a question on <a href="http://stackoverflow.com/">Stack Overflow</a>, 
-making sure to include the 'rsquarelabs-core' tag.</p>
-<p>For updates on rsquarelabs-core framework development, you may also want to 
-follow <a href="https://twitter.com/_tomchristie">the author</a> on Twitter.</p>
-<h2 id="security"><a class="toclink" href="#security">Security</a></h2>
-<p>If you believe you’ve found something in rsquarelabs-core framework which has 
-security implications, please do not raise the issue in a public forum.</p>
-<p>Send a description of the issue via email to ravi@rsquarelabs.com. The project 
-maintainers will then work with you to resolve any issues where required, 
-prior to any public disclosure.</p>
-<h2 id="license"><a class="toclink" href="#license">License</a></h2>
-<p>Copyright 2016 Ravi Raja Tejasvi Merugu</p>
-<p>Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at</p>
-<pre><code>http://www.apache.org/licenses/LICENSE-2.0
-</code></pre>
-<p>Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.</p></div>
+<h1 id="use-cases"><a class="toclink" href="#use-cases">Use Cases</a></h1></div>
         </div>
 
         <footer class="col-md-12">
@@ -287,12 +208,12 @@ limitations under the License.</p></div>
             <center>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</center>
         </footer>
 
-        <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/bootstrap-3.0.3.min.js"></script>
-        <script src="./js/highlight.pack.js"></script>
-        <script>var base_url = '.';</script>
-        <script data-main="./mkdocs/js/search.js" src="./mkdocs/js/require.js"></script>
-        <script src="./js/base.js"></script>
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
             <div class="modal-dialog">

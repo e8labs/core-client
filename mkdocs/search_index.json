@@ -51,14 +51,24 @@
             "title": "License"
         }, 
         {
-            "location": "/user-guide/tutorial/quickstart/", 
+            "location": "/user-guide/tutorial/", 
             "text": "Index", 
-            "title": "Quickstart"
+            "title": "Tutorials"
         }, 
         {
-            "location": "/user-guide/tutorial/quickstart/#index", 
+            "location": "/user-guide/tutorial/#index", 
             "text": "", 
             "title": "Index"
+        }, 
+        {
+            "location": "/user-guide/usercases/", 
+            "text": "Use Cases", 
+            "title": "Use Cases"
+        }, 
+        {
+            "location": "/user-guide/usercases/#use-cases", 
+            "text": "", 
+            "title": "Use Cases"
         }, 
         {
             "location": "/dev-guide/modules/project/", 
@@ -87,13 +97,18 @@
         }, 
         {
             "location": "/dev-guide/modules/gromacs/", 
-            "text": "Gromacs", 
+            "text": "Gromacs\n\n\nProtocol Sample\n\n\nFor Gromacs \n\n\nimport_files()\nwrite_ions_mdp()\nwrite_prod_mdp()\ncreate_topology()\ncreate_water_box()\nneutralize_system()\nminimize()", 
             "title": "Gromacs"
         }, 
         {
             "location": "/dev-guide/modules/gromacs/#gromacs", 
             "text": "", 
             "title": "Gromacs"
+        }, 
+        {
+            "location": "/dev-guide/modules/gromacs/#protocol-sample", 
+            "text": "For Gromacs   import_files()\nwrite_ions_mdp()\nwrite_prod_mdp()\ncreate_topology()\ncreate_water_box()\nneutralize_system()\nminimize()", 
+            "title": "Protocol Sample"
         }, 
         {
             "location": "/dev-guide/documentation/", 
