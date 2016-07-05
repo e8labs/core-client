@@ -1,1 +1,3 @@
-[nitish515](https://github.com/orgs/rsquarelabs/people/nitish515)
+# Contributors
+
+- [nitish515](https://github.com/orgs/rsquarelabs/people/nitish515)
